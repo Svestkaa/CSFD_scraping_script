@@ -1,3 +1,36 @@
+# 🎬 CSFD Web Scraper (Python + Selenium)
+
+This repository contains a **web scraping script** for extracting movie ratings and reviews from [ČSFD](https://www.csfd.cz/).  
+It is designed to handle **dynamic content, retries, automated restarts, and progress tracking**.  
+
+> Based on the original CSFD script by [Dino6Ao](https://github.com/Dino6Ao).
+
+---
+
+## ✨ Features
+
+- **Selenium Integration** – Works with dynamically rendered JS content.  
+- **Automated Restarts** – Handles crashes and session invalidation.  
+- **Progress Tracking** – Skips already scraped data, resumes where it left off.  
+- **Headless Mode** – Run without browser window (server-friendly).  
+- **Configurable Delays** – Avoids IP bans and server overload.  
+- **Extensible** – Can be easily modified for other scraping tasks.  
+
+---
+
+## 🚀 Usage
+
+### 1. Get User ID  
+Find the user ID in profile URL:  
+Example: [https://www.csfd.cz/uzivatel/95-golfista/prehled/](https://www.csfd.cz/uzivatel/95-golfista/prehled/)  
+→ User ID = **95**
+
+Run the script with:  
+```bash
+python csfd.py --user 95 --ratings
+python csfd.py --user 95 --reviews
+
+
 ## 🔑 Get Permanent Login Token
 
 1. Log in to **ČSFD** in your browser.  
